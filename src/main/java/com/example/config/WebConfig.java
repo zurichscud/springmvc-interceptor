@@ -1,9 +1,11 @@
 package com.example.config;
 
+import com.example.interceptor.MyInterceptor;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
@@ -24,4 +26,9 @@ public class WebConfig implements WebMvcConfigurer {
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
+    /**
+     * @Description: 注入拦截器
+     * @Param:
+     * @Return:
+     **/
 }
